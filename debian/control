@@ -1,0 +1,36 @@
+Source: oasys
+Section: libs
+Priority: optional
+Maintainer: Leo Iannacone <l3on@ubuntu.com>
+Build-Depends:
+ debhelper (>= 7.0.50),
+ dh-autoreconf,
+ libdb-dev,
+ libxerces-c2-dev,
+ tcl-dev
+Standards-Version: 3.9.3
+Homepage: http://www.dtnrg.org
+Vcs-Hg: http://dtn.hg.sourceforge.net/hgweb/dtn/oasys
+Vcs-Browser: http://dtn.hg.sourceforge.net/hgweb/dtn/oasys
+
+Package: liboasys
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${python:Depends},
+ ${shlibs:Depends}
+Description: The oasys library
+ .
+ Oasys is a C++ utility library of system wrappers and utility classes.
+
+Package: liboasys-dev
+Architecture: any
+Section: libdevel
+Depends:
+ liboasys (= ${binary:Version}),
+ ${misc:Depends},
+ ${python:Depends}
+Description: The oasys library - development headers
+ .
+ Oasys is a C++ utility library of system wrappers and utility
+ classes. This package contains the development headers.

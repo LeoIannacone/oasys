@@ -1,0 +1,81 @@
+oasys (1.5.0+hg2298-1) unstable; urgency=low
+
+  * Update source at mercurial revision 2298
+  * Build with dh-autoreconf
+  * Bump Standards.
+
+ -- Leo Iannacone <l3on@ubuntu.com>  Tue, 27 Mar 2012 17:43:53 +0200
+
+oasys (1.5.0+hg2287-1) unstable; urgency=low
+
+  * Update source at mercurial revision 2287
+
+  * Removed patch fix-amd64-build-fail.patch (Bug: #2990587 fixed)
+  
+  * Removed patch fix-aclocal-oasys.patch (Bug: #2990587 fixed)
+
+  * Added debian/copyright
+
+  * debian/control:
+    - removed version dependences from tcl-dev, libdb-dev, libxerces-c2-dev
+    - added {misc:Depends} ${python:Depends} to Depends field
+    - updated standards version
+    - removed original maintainer field
+    - added homepage field
+    - added Vcs fields
+    - update debhelper version
+
+  * debian/rules:
+    - new 3.0 format
+    - override dh_auto_test due to build issue on tests/
+    - override dh_auto_install due to path in *.install file
+
+  * Removed debian/*.dirs files and README.debian
+
+ -- Leo Iannacone <l3on@ubuntu.com>  Tue, 29 Nov 2011 12:34:14 +0100
+
+oasys (1.4.0-1) stable; urgency=low
+
+  * Applying fix-aclocal-oasys.patch to fix configuring fail for applications
+    depend on oasys (Bug: #2998095)
+
+  * Applying fix-amd64-build-fail.patch to fix building fail on amd64
+    (Bug: #2990587)
+
+  * Running ./build-confugure.sh to recreate configuration files
+
+  * Added format 3.0 (quilt) at debian/source
+
+  * debian/control:
+    - replaced '[]' in '<>' at maintainer email
+    - removed make, gcc, g++ as Build-Depends
+    - added Standards-Version 3.9.0
+
+  * debian/rules:
+    - added dh_makeshlibs at binary_arch
+
+ -- Leo Iannacone <l3on@ubuntu.com>  Thu, 15 Jul 2010 17:38:57 +0200
+
+oasys (1.4.0) unstable; urgency=low
+
+  * 1.4.0 build 
+
+ -- Alex McMahon <alex.mcmahon@cs.tcd.ie>  Fri, 22 Feb 2010 16:46:17 +0100
+
+oasys (1.3.0) unstable; urgency=low
+
+  * 2.6.0 build 2.6.0 build 
+
+ -- Alex McMahon <alex.mcmahon@cs.tcd.ie>  Fri, 08 May 2009 16:46:17 +0100
+
+oasys (1.3.0-2) unstable; urgency=low
+
+  * tweak autoconf and build rules* 
+
+ -- Michael Demmer <demmer@sandbox.berkeley.intel-research.net>  Wed,  5 Mar 2008 14:38:24 -0800
+
+oasys (1.3.0-1) unstable; urgency=low
+
+  * Initial release of a debian package.
+
+ -- Michael Demmer <demmer@cs.berkeley.edu>  Wed,  5 Mar 2008 11:28:10 -0800
